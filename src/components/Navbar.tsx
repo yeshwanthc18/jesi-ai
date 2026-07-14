@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Services', href: '#services' },

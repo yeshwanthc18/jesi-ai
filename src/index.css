@@ -4,8 +4,8 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body { @apply bg-white text-ink-800 font-sans; overflow-x: hidden; }
-  ::selection { background: #F72585; color: #fff; }
+  body { @apply bg-white text-gray font-sans; overflow-x: hidden; }
+  ::selection { background: #A91E2D; color: #fff; }
 }
 
 @layer components {
@@ -20,4 +20,4 @@
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #EAEAEA; }
 ::-webkit-scrollbar-thumb { background: #A8A8A8; }
-::-webkit-scrollbar-thumb:hover { background: #F72585; }
+::-webkit-scrollbar-thumb:hover { background: #A91E2D; }

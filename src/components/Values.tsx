@@ -1,4 +1,3 @@
-import React from "react";
 import { BookOpen, Users, Cpu } from "lucide-react";
 import { useReveal } from "../hooks/useReveal";
 

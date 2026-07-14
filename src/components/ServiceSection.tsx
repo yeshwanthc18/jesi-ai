@@ -189,7 +189,7 @@ const stepsData: StepData[] = [
             id: 3,
             title: "AR / VR",
             stage: "Interactive Visualization",
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80",
+            img: "https://images.unsplash.com/photo-1518770630439-463619030475?auto=format&fit=crop&w=500&q=80",
           },
         ].map((item) => (
           <div
@@ -311,8 +311,14 @@ function CardSection({
   const startRange = index / totalSteps;
   const endRange = (index + 1) / totalSteps;
 
-  const exitStartRange = Math.max(startRange, endRange - 0.08);
-  const exitEndRange = Math.min(endRange, 1.0);
+  // FIX: Only start exiting when the NEXT card begins entering.
+  // Previously exitStartRange was clamped to endRange - 0.08 which
+  // caused cards 3 and 4 to begin their exit (scale/opacity/translate)
+  // too early, making them jump off-screen before the user could
+  // scroll to them. Now each card stays fully visible until the
+  // next card's scroll range begins.
+  const exitStartRange = startRange + (endRange - startRange) * 0.85;
+  const exitEndRange = Math.min(endRange + 0.02, 1.0);
 
   const scale = useTransform(
     smoothProgress,
@@ -329,19 +335,19 @@ function CardSection({
   const y = useTransform(
     smoothProgress,
     [startRange, exitStartRange, exitEndRange],
-    [0, 0, 750],
+    [0, 0, 250],
   );
 
   const rotateX = useTransform(
     smoothProgress,
     [startRange, exitStartRange, exitEndRange],
-    [0, 0, -24],
+    [0, 0, -12],
   );
 
   const rotateZ = useTransform(
     smoothProgress,
     [startRange, exitStartRange, exitEndRange],
-    [0, 0, -6],
+    [0, 0, -3],
   );
 
   const willChange = useTransform(

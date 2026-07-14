@@ -10,15 +10,19 @@ import { FAQ } from './components/FAQ';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 import ServiceSection from './components/ServiceSection';
+import { BIMServiceDetail } from './components/BIMServiceDetail';
+import { ProjectPopup } from './components/ProjectPopup';
 
 function App() {
   return (
     <div className="relative min-h-screen bg-white">
+      <ProjectPopup />
       <Navbar />
       <main>
         <Hero />
         <Marquee />
         <ServiceSection />
+        <BIMServiceDetail />
         <Services />
         <Values />
         <GoldenRules />
