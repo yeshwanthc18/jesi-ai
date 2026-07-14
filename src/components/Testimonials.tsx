@@ -4,27 +4,27 @@ import { useReveal } from '../hooks/useReveal';
 
 const testimonials = [
   {
-    quote: "We appreciate JES's expertise in VRV and FCU takeoffs. Their fast, accurate, and on-time support has been key to our success. Highly recommended for reliable, high-quality service.",
+    quote: "JES delivered a fully coordinated federated MEP model in under 72 hours. Zero unresolved clashes on the first coordination pass — our subcontractors were stunned.",
     author: 'Thermosystems, IL',
-    role: 'Senior Partner',
+    role: 'Senior BIM Coordinator',
     photo: 1181686,
   },
   {
-    quote: "We truly appreciate your work. Without outsourcing our takeoffs and selections, we couldn't handle the volume our estimating department manages today. Excellent support all around.",
+    quote: "Their Revit models are immaculate. Every system routed, every clash resolved, every RFI documented. We've stopped doing BIM coordination in-house entirely.",
     author: 'Nick Colby',
     role: 'President, Colby Equipment',
     photo: 1222271,
   },
   {
-    quote: "JES's 3D virtual design blew my client away. Their detail and dedication exceeded expectations, giving me confidence in presenting our equipment designs. Outstanding expertise.",
-    author: 'MRG',
-    role: 'Sales Engineer, Nashville TN',
+    quote: "The LOD 400 fabrication-level model JES produced saved us three weeks on site. Hanger locations, spool drawings, connection details — all extracted directly from the model.",
+    author: 'MRG Associates',
+    role: 'MEP Project Manager, Nashville TN',
     photo: 3763188,
   },
   {
-    quote: "JES enhanced our air handling business with excellent selection, drawings, and submittals. Their quick, reliable service saves time, cuts costs, and improves satisfaction.",
+    quote: "We handed JES a messy set of as-built PDFs. They returned a clean LOD 500 Revit model with full FM parameter data — ready for our digital twin handover package.",
     author: 'D & B Building Services',
-    role: 'Partner, NJ',
+    role: 'BIM Lead, NJ',
     photo: 2379004,
   },
 ];
@@ -36,8 +36,12 @@ export function Testimonials() {
     <section id="clients" className="bg-ink-800 py-16 lg:py-24">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={ref} className={`reveal ${inView ? 'in-view' : ''} mb-12`}>
+          <p className="mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-brand-red">
+            <span className="block h-px w-8 bg-brand-red" />
+            Client results
+          </p>
           <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-            What our clients are
+            What BIM clients are
             <br />
             <span className="text-ink-400">saying about us</span>
           </h2>
@@ -51,7 +55,7 @@ export function Testimonials() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative aspect-[4/3] overflow-hidden"
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl"
             >
               <img
                 src={`https://images.pexels.com/photos/${t.photo}/pexels-photo-${t.photo}.jpeg?auto=compress&cs=tinysrgb&w=600`}

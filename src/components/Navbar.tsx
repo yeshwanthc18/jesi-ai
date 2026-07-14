@@ -3,8 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'BIM Detail', href: '#bim-detail' },
+  { label: 'BIM Services', href: '#bim-detail' },
   { label: 'Process', href: '#process' },
   { label: 'Clients', href: '#clients' },
   { label: 'FAQ', href: '#faq' },
@@ -34,7 +33,7 @@ export function Navbar() {
             <a href="#top" className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-red" />
               <span className="font-display text-xl font-bold tracking-tight text-ink-800">JES</span>
-              <span className="hidden text-sm font-medium text-ink-400 sm:inline">Engineering</span>
+              <span className="hidden text-sm font-medium text-ink-400 sm:inline">BIM Services</span>
             </a>
 
             <div className="hidden items-center gap-7 md:flex">
@@ -51,7 +50,7 @@ export function Navbar() {
                 href="#contact"
                 className="rounded bg-brand-red px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-ink-800"
               >
-                Free Pilot →
+                Free BIM Pilot →
               </a>
             </div>
 
@@ -97,7 +96,7 @@ export function Navbar() {
                 transition={{ delay: navLinks.length * 0.06 }}
                 className="mt-4 rounded bg-brand-red px-8 py-3 text-sm font-semibold text-white"
               >
-                Free Pilot →
+                Free BIM Pilot →
               </motion.a>
             </div>
           </motion.div>

@@ -1,9 +1,9 @@
 import { Linkedin, Instagram, Twitter } from 'lucide-react';
 
 const footerLinks = {
-  Services: ['Quantity Take Off', 'Equipment Selection', 'Spec Review', 'BIM Modelling', 'AR/VR Modelling', 'MEP Drafting'],
-  Company: ['About Us', 'Why JES', 'Process', 'FAQ'],
-  Resources: ['Energy Modelling', 'Revit Models', 'Building Engineering', 'Case Studies'],
+  'BIM Services': ['LOD 100–500 Modeling', 'Clash Detection', 'Shop Drawings', 'BOQ Schedules', 'As-built Models', 'RFI Management'],
+  Company: ['About JES', 'Our Process', 'Client Results', 'FAQ'],
+  Resources: ['Revit MEP', 'Navisworks', 'BIM 360 / ACC', 'Dynamo'],
 };
 
 export function Footer() {
@@ -15,12 +15,12 @@ export function Footer() {
             <a href="#top" className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-red" />
               <span className="font-display text-xl font-bold text-ink-800">JES</span>
-              <span className="text-sm font-medium text-ink-400">Engineering</span>
+              <span className="text-sm font-medium text-ink-400">BIM Services</span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-500">
-              Combining India-based engineering expertise with 200+ professional
-              engineers across India and Qatar. AI-powered engineering and CAD
-              services you can count on.
+              Federated MEP BIM models — LOD 100 to 500. Clash-free Revit
+              coordination delivered on BIM 360 or ACC. Built by engineers,
+              for engineers.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Instagram, Twitter].map((Icon, i) => (

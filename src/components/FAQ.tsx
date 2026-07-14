@@ -5,24 +5,28 @@ import { useReveal } from '../hooks/useReveal';
 
 const faqs = [
   {
-    q: 'What is Quantity Take-Off and why is it important?',
-    a: 'Quantity Take-Off (QTO) is the process of measuring materials, components, and labor needed for construction projects. It ensures accurate cost estimation, reduces material wastage, and supports better budgeting and project planning.',
+    q: 'What LOD levels do you support for BIM modeling?',
+    a: 'We deliver models at every LOD from 100 (conceptual massing) through 500 (as-built with FM data). Most coordination projects land at LOD 300 for permit sets, or LOD 400 for fabrication-level shop drawings with hanger locations and spool sheets.',
   },
   {
-    q: 'How does our team assist with Equipment or Product Selection?',
-    a: 'We help clients choose the most efficient, cost-effective, and specification-compliant products and equipment. Our team evaluates performance data, compatibility, and sustainability to ensure the best selection for your project.',
+    q: 'How fast can you deliver a coordinated BIM model?',
+    a: 'Standard single-floor coordination models are delivered within 72 hours. Larger multi-discipline projects are scoped with a clear timeline during the scope review phase. Rush delivery is available — just ask.',
   },
   {
-    q: 'What does a Specification Review include?',
-    a: 'Our Specification Review process checks technical documentation for consistency, clarity, and compliance with project requirements. This helps prevent design conflicts, delays, and rework during later stages.',
+    q: 'Do you work in our Revit templates and BIM standards?',
+    a: 'Yes. We adopt your company templates, shared parameters, view templates, and annotation standards. Your model looks like it was built in-house — because our team operates as an extension of your engineering team.',
   },
   {
-    q: 'What are the benefits of BIM Modelling for my project?',
-    a: 'BIM provides a 3D digital representation of your project that integrates design, cost, and time data. It enhances collaboration, reduces design errors, and allows for better decision-making throughout the construction lifecycle.',
+    q: 'What clash detection do you perform before delivery?',
+    a: 'Every model runs through Navisworks clash detection before delivery. We provide a full clash matrix with discipline-by-discipline counts, visual snapshots, and a resolution log. Zero unresolved clashes — guaranteed.',
   },
   {
-    q: "What's the difference between Component and Assembly Revit Models?",
-    a: 'Component models represent individual elements such as walls, doors, or HVAC units. Assembly models combine multiple components to form complex systems or units, enabling better visualization and coordination across disciplines.',
+    q: 'Can you deliver on BIM 360 or Autodesk Construction Cloud?',
+    a: 'Absolutely. We deliver directly to your BIM 360 or ACC environment, or via your preferred cloud platform (SharePoint, Procore, etc.). No new software to install, no JES portal to log into — we come to you.',
+  },
+  {
+    q: 'What file formats do you deliver?',
+    a: 'Standard delivery includes native Revit (.RVT), Navisworks (.NWD), AutoCAD (.DWG), and PDF sets. We also provide quantity schedules (BOQ) in Excel or CSV, and RFI logs in your preferred format.',
   },
 ];
 
@@ -34,6 +38,10 @@ export function FAQ() {
     <section id="faq" className="bg-ink-100 py-16 lg:py-24">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={ref} className={`reveal ${inView ? 'in-view' : ''} mb-12 max-w-2xl`}>
+          <p className="mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-brand-red">
+            <span className="block h-px w-8 bg-brand-red" />
+            BIM Modeling FAQ
+          </p>
           <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-ink-800 sm:text-4xl lg:text-5xl">
             Frequently asked
             <br />

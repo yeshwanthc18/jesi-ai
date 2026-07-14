@@ -42,7 +42,7 @@ export function ProjectPopup() {
             <div className="relative h-44 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                alt="New BIM project"
+                alt="BIM modeling project"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
@@ -50,25 +50,25 @@ export function ProjectPopup() {
               <div className="absolute bottom-4 left-5">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-red px-3 py-1 text-xs font-semibold text-white">
                   <Sparkles className="h-3 w-3" />
-                  New Project
+                  New BIM Project
                 </span>
               </div>
             </div>
 
             <div className="p-6">
               <h3 className="font-display text-xl font-bold text-ink-800">
-                BIM Modeling Pilot — Now Accepting Projects
+                Free BIM Modeling Pilot — 72 Hour Delivery
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                Send us one drawing. We'll return a fully coordinated BIM model in
-                72 hours — completely free, no commitment required. Experience
-                the JES difference on your next MEP project.
+                Send us one drawing. We'll return a fully coordinated, clash-free
+                Revit MEP model at your target LOD — completely free, no
+                commitment required.
               </p>
 
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {[
                   { label: 'Turnaround', value: '72hrs' },
-                  { label: 'Disciplines', value: 'M·E·P' },
+                  { label: 'LOD Range', value: '100–500' },
                   { label: 'Cost', value: 'Free' },
                 ].map((s) => (
                   <div key={s.label} className="rounded-lg bg-ink-100 p-3 text-center">
@@ -83,7 +83,7 @@ export function ProjectPopup() {
                 onClick={() => setOpen(false)}
                 className="group mt-5 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-red px-6 py-3 font-display text-sm font-semibold text-white transition-colors hover:bg-ink-800"
               >
-                Start your free pilot
+                Start your free BIM pilot
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <button

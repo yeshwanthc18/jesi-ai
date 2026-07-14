@@ -23,7 +23,9 @@ export function CTA() {
               transition={{ duration: 0.6 }}
               className="font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-7xl"
             >
-              Let's team up!
+              Got a BIM project
+              <br />
+              in mind?
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -31,8 +33,8 @@ export function CTA() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-6 max-w-xl text-lg text-white/85"
             >
-              We are a technology and production studio, built by engineers for
-              engineers. Drop your RFQ — we take it from there.
+              Send us a drawing set. We'll return a free BIM pilot within 72
+              hours — no commitment, no retainer, no catch.
             </motion.p>
           </div>
 
@@ -45,7 +47,7 @@ export function CTA() {
             whileTap={{ scale: 0.98 }}
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink-800 px-10 py-5 text-lg font-bold text-white transition-colors duration-300 hover:bg-white hover:text-ink-800 lg:self-center"
           >
-            Reach out!
+            Start free pilot
             <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
           </motion.a>
         </div>

@@ -24,8 +24,8 @@ export function Hero() {
       {/* Parallax background image */}
       <motion.div className="absolute inset-0 z-0" style={{ y, scale }}>
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
-          alt="Modern architecture"
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+          alt="BIM coordinated MEP model"
           className="h-full w-full object-cover"
           loading="eager"
         />
@@ -48,10 +48,7 @@ export function Hero() {
         style={{ y: contentY, opacity }}
         className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16 pt-24 lg:px-10 lg:pb-24 lg:pt-32"
       >
-        <div
-          ref={revealRef}
-          className={inView ? 'animate-fade-up' : 'opacity-0'}
-        >
+        <div ref={revealRef} className={inView ? 'animate-fade-up' : 'opacity-0'}>
           {/* Eyebrow */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -60,12 +57,12 @@ export function Hero() {
             className="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-brand-red"
           >
             <span className="block h-px w-8 bg-brand-red" />
-            MEP Engineering Services — USA · India · Qatar
+            BIM Modeling Services — LOD 100–500 · Revit MEP
           </motion.div>
 
           {/* Headline */}
           <h1 className="font-display text-[2.75rem] font-extrabold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem]">
-            {'Engineering possibilities,'.split('').map((char, i) => (
+            {'BIM models,'.split('').map((char, i) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -83,7 +80,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="text-brand-red inline-block"
             >
-              unlocked.
+              delivered.
             </motion.span>
           </h1>
 
@@ -94,9 +91,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 1 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-ink-200 lg:text-lg"
           >
-            We take 2D drawings and turn them into fully coordinated BIM models,
-            fabrication-ready shop drawings, and immersive AR walkthroughs — so
-            your team can stay focused on winning the next project.
+            We build federated MEP BIM models that combine mechanical, electrical,
+            and plumbing systems into a single, coordinated Revit environment —
+            clash-free, mapped to your standards, and delivered cloud-ready on
+            BIM 360 or ACC.
           </motion.p>
 
           {/* Stats */}
@@ -107,9 +105,9 @@ export function Hero() {
             className="mt-10 flex flex-col gap-6 sm:flex-row sm:gap-12"
           >
             {[
-              { n: '13', suffix: 'k+', label: 'Projects delivered globally across MEP, BIM and KPO services' },
-              { n: '200', suffix: '+', label: 'Engineers across the US, India, and Qatar' },
+              { n: 'LOD', suffix: '100–500', label: 'Full range from conceptual massing to as-built FM handover' },
               { n: '72', suffix: 'hrs', label: 'Average turnaround for standard BIM coordination projects' },
+              { n: '0', suffix: '', label: 'Unresolved clashes in models before delivery — guaranteed' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -137,16 +135,16 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 rounded bg-brand-red px-7 py-3 font-display text-sm font-semibold text-white transition-all duration-300 hover:bg-ink-800 hover:shadow-2xl"
+              className="group inline-flex items-center gap-2 rounded bg-brand-red px-7 py-3 font-display text-sm font-semibold text-white transition-all duration-300 hover:bg-ink-700 hover:shadow-2xl"
             >
               Start a free BIM pilot
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#services"
+              href="#bim-detail"
               className="group inline-flex items-center gap-2 rounded border border-ink-300/30 px-7 py-3 font-display text-sm font-medium text-ink-200 transition-all duration-300 hover:border-white hover:text-white"
             >
-              Explore services
+              Explore BIM services
             </a>
           </motion.div>
         </div>
