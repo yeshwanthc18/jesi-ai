@@ -9,7 +9,7 @@ export function Marquee() {
       <div className="flex w-max animate-marquee whitespace-nowrap">
         {[...services, ...services].map((s, i) => (
           <span key={i} className="px-5 font-display text-base font-medium text-ink-400">
-            {s} <span className="text-pink">/</span>
+            {s} <span className="text-brand-red">/</span>
           </span>
         ))}
       </div>

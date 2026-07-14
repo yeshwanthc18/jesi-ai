@@ -12,10 +12,12 @@ import { Footer } from './components/Footer';
 import ServiceSection from './components/ServiceSection';
 import { BIMServiceDetail } from './components/BIMServiceDetail';
 import { ProjectPopup } from './components/ProjectPopup';
+import { ScrollProgress } from './components/ScrollProgress';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-white">
+    <div className="relative min-h-screen bg-ink-50">
+      <ScrollProgress />
       <ProjectPopup />
       <Navbar />
       <main>

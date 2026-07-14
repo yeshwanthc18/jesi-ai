@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useReveal } from '../hooks/useReveal';
 
 const faqs = [
@@ -33,7 +34,7 @@ export function FAQ() {
     <section id="faq" className="bg-ink-100 py-16 lg:py-24">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={ref} className={`reveal ${inView ? 'in-view' : ''} mb-12 max-w-2xl`}>
-          <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-ink-900 sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-ink-800 sm:text-4xl lg:text-5xl">
             Frequently asked
             <br />
             <span className="text-ink-400">questions.</span>
@@ -42,16 +43,34 @@ export function FAQ() {
 
         <div className="max-w-3xl space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className={`overflow-hidden border transition-colors duration-300 ${open === i ? 'border-ink-300 bg-white' : 'border-ink-200 bg-white'}`}>
-              <button onClick={() => setOpen(open === i ? null : i)} className="flex w-full items-center justify-between gap-4 p-5 text-left">
-                <span className="font-display text-base font-medium text-ink-900">{faq.q}</span>
-                <ChevronDown className={`h-5 w-5 shrink-0 text-pink transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`} />
+            <div
+              key={i}
+              className={`overflow-hidden border transition-colors duration-300 ${
+                open === i ? 'border-brand-red/30 bg-white' : 'border-ink-200 bg-white'
+              }`}
+            >
+              <button
+                onClick={() => setOpen(open === i ? null : i)}
+                className="flex w-full items-center justify-between gap-4 p-5 text-left"
+              >
+                <span className="font-display text-base font-medium text-ink-800">{faq.q}</span>
+                <ChevronDown
+                  className={`h-5 w-5 shrink-0 text-brand-red transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
+                />
               </button>
-              <div className={`grid transition-all duration-300 ${open === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                <div className="overflow-hidden">
-                  <p className="px-5 pb-5 text-sm leading-relaxed text-ink-600">{faq.a}</p>
-                </div>
-              </div>
+              <AnimatePresence initial={false}>
+                {open === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <p className="px-5 pb-5 text-sm leading-relaxed text-ink-500">{faq.a}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
